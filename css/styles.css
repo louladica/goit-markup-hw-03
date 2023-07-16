@@ -32,7 +32,7 @@ img{
 /* General container */
 
 .container {
-    max-width: 1158px
+    width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
     }
@@ -52,13 +52,14 @@ body {
 
   /* CSS for Header */
 .header{
-    padding: 24px 24px;
+    padding: 24px 0;
     border-bottom: 1px solid var(--cornflower)
 }
 
 .header-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-navigation{
@@ -67,15 +68,13 @@ body {
 }
 
 .webstudio-logo{
-    margin-right: 76px;
-
+    font-family: 'Raleway';
     text-decoration: none; 
     font-size: 18px;
     font-weight: 800;
 }
 
 .web-logo{
-    padding-left: 156px;
     color: var(--iriscolor);
 }
 
@@ -87,7 +86,9 @@ body {
 
 .navigation{
     display: flex;
+    margin-left: 76px;
     gap: 40px;
+
 }
 
 .navigation .pages{
@@ -102,7 +103,7 @@ body {
 
 .navigation .pages:hover,
 .navigation .pages:focus,
-.navigation .pages.currentoption,
+.navigation .pages.current-option,
 .contact-information .information:hover,
 .contact-information .information:focus {
     color: var(--oceancolor);
@@ -112,12 +113,8 @@ body {
 .contact-information{
     display: flex;
     align-items: center;
-    margin-left: auto;
+    justify-content: space-between;
     gap: 40px;
-}
-
-.phone-number{
-    padding-right: 156px;
 }
 
 .contact-information .information{
@@ -127,12 +124,18 @@ body {
 
 /* Hero Section*/
 .hero{
+    padding: 188px 0;
     background-color: var(--navyblue);
 }
 
-.hero-title{
-    padding: 188px 472px 48px;
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.hero-title{
+    margin-bottom: 48px;
     color: var(--whitecolor);
     font-size: 56px;
     font-weight: 700;
@@ -140,13 +143,8 @@ body {
     text-align: center;
 }
 
-.button-wrap{
-    padding-bottom: 188px;
-}
-
 .btn{
     display: block;
-    margin: 0 auto;
 
     cursor: pointer;
     border-color: transparent;
@@ -155,6 +153,7 @@ body {
 }
 
 .btn.primary{
+    padding: 16px 32px;
 
     background-color: var(--iriscolor);
     color: var(--whitecolor);
@@ -163,7 +162,6 @@ body {
     line-height: 24px;
     letter-spacing: 0.64px;
     border-radius: 4px;
-
 }
 
 .btn.primary:hover,
@@ -199,15 +197,12 @@ body {
 }
 
 /* What are we doing section */
-
-.services-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.section-no-top-padding{
+    padding-top: 0;
 }
 
 .section-title{
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 
     color: var(--navyblue);
     font-size: 36px;
@@ -247,8 +242,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    padding-bottom: 32px;
 
+    border-radius: 0px 0px 4px 4px;
     background-color: var(--whitecolor);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
@@ -258,8 +254,8 @@ body {
 }
 
 .teamname{
-    padding-top: 32px;
-    
+    margin-top: 32px;
+    margin-bottom: 8px;
     color: var(--navyblue);
     font-size: 20px;
     letter-spacing: 0.4px;
@@ -268,23 +264,14 @@ body {
 }
 
 .position{
-    padding-bottom: 32px;
-
     color: var(--slatecolor);
     text-align: center;
 }
 
 /* CSS for footer */
 
-.footer-container{
-    display: inline-flex;
-    flex-direction: column;
-    gap: 16px;
-
-    padding: 100px 156px;
-}
-
 .footer-part{
+    padding: 100px 0;
     background-color: var(--navyblue);
 }
 
@@ -293,26 +280,24 @@ body {
 }
 
 .footerparagraph{
+    margin-top: 16px;
     color: var(--whitecolor);
-    width: 265px;
-    height: 75px;
 }
 
 /* CSS for Portfolio Section */
 
 /* Filters */
-.filters-wrap{
+
+.project-container{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 .filters{
     display: inline-flex;
-    align-items: center;
     gap: 24px;
-
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .filter{
@@ -358,27 +343,24 @@ body {
 /* Projects */
 
 .project-wrap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-
-    padding-top: 48px;
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: none;
 }
 
-.project{
-    border: 1px solid var(--cornflower)
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
 }
 
 .project-title{
     display: flex;
-    padding: 0 16px;
-    padding-top: 32px;
+
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
+    
 
     color: var(--navyblue);
     font-size: 20px;
@@ -388,13 +370,10 @@ body {
 
 .project-description{
     display: flex;
-    padding: 0px 16px;
-    padding-bottom: 32px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
+   
 
     color: var(--slatecolor);
 }

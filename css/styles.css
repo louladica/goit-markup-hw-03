@@ -75,6 +75,7 @@ body {
 }
 
 .web-logo{
+    padding-left: 156px;
     color: var(--iriscolor);
 }
 
@@ -114,6 +115,11 @@ body {
     margin-left: auto;
     gap: 40px;
 }
+
+.phone-number{
+    padding-right: 156px;
+}
+
 .contact-information .information{
     color: var(--navcolor);
     text-decoration: none;

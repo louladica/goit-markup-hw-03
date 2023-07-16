@@ -11,6 +11,32 @@
     --cloud: #F4F4FD;
 }
 
+/* CSS reset */
+p,
+h1,
+h2,
+h3{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+}
+/* End of CSS reset */
+
+/* General container */
+
+.container {
+    max-width: 1158px
+    padding: 0 15px;
+    margin: 0 auto;
+    }
+
 body {
     font-family: Roboto;
     font-size: 16px;
@@ -19,8 +45,30 @@ body {
     line-height: 24px;
   }
 
+.section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
   /* CSS for Header */
+.header{
+    padding: 24px 24px;
+    border-bottom: 1px solid var(--cornflower)
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation{
+    display: flex;
+    align-items: center;
+}
+
 .webstudio-logo{
+    margin-right: 76px;
+
     text-decoration: none; 
     font-size: 18px;
     font-weight: 800;
@@ -31,14 +79,20 @@ body {
 }
 
 .studio-logo{
-color: var(--navyblue);
+    color: var(--navyblue);
 }
 
 /* Navigation Section */
+
+.navigation{
+    display: flex;
+    gap: 40px;
+}
+
 .navigation .pages{
-color: var(--navcolor);
-text-decoration: none;
-font-weight: 500;
+    color: var(--navcolor);
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .lists{
@@ -52,31 +106,50 @@ font-weight: 500;
 .contact-information .information:focus {
     color: var(--oceancolor);
 }
+/* Contact information */
 
+.contact-information{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 40px;
+}
 .contact-information .information{
     color: var(--navcolor);
     text-decoration: none;
 }
-/* Section 1 */
+
+/* Hero Section*/
 .hero{
     background-color: var(--navyblue);
 }
 
 .hero-title{
+    padding: 188px 472px 48px;
+
     color: var(--whitecolor);
     font-size: 56px;
     font-weight: 700;
     line-height: 60px;
+    text-align: center;
+}
+
+.button-wrap{
+    padding-bottom: 188px;
 }
 
 .btn{
+    display: block;
+    margin: 0 auto;
+
     cursor: pointer;
     border-color: transparent;
     letter-spacing: 0.64px;
-    font-family: inherit;
+    font-family: inherit; 
 }
 
 .btn.primary{
+
     background-color: var(--iriscolor);
     color: var(--whitecolor);
     font-size: 16px;
@@ -84,6 +157,7 @@ font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.64px;
     border-radius: 4px;
+
 }
 
 .btn.primary:hover,
@@ -93,39 +167,118 @@ font-weight: 500;
 
 /* Criteria list */
 
-.titlelist{
+.criterias{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.criteria{
+    display: flex;
+    width: 264px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.title-list{
+
     color: var(--navyblue);
     font-size: 20px;
     font-weight: 500;
 }
 
-.descriptionlist{
+.description-list{
     color: var(--slatecolor);
 }
 
 /* What are we doing section */
+
+.services-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section-title{
+    padding-bottom: 72px;
+
     color: var(--navyblue);
     font-size: 36px;
     font-weight: 700;
+    text-align: center;
 }
+
+.services{
+    display: flex;
+    gap: 24px;
+
+}
+
+.service{
+    display: inline-flex;
+
+    border: 1px solid var(--cornflower);
+}
+
 /* Our Team */
+.team-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teams{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    background-color: var(--whitecolor);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 .section-grey{
     background-color: var(--cloud);
 }
 
 .teamname{
+    padding-top: 32px;
+    
     color: var(--navyblue);
     font-size: 20px;
     letter-spacing: 0.4px;
     font-weight: 500;
+    text-align: center;
 }
 
 .position{
+    padding-bottom: 32px;
+
     color: var(--slatecolor);
+    text-align: center;
 }
+
 /* CSS for footer */
-.footerbg{
+
+.footer-container{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 100px 156px;
+}
+
+.footer-part{
     background-color: var(--navyblue);
 }
 
@@ -141,7 +294,26 @@ font-weight: 500;
 
 /* CSS for Portfolio Section */
 
+/* Filters */
+.filters-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters{
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+
+    padding-bottom: 72px;
+}
+
 .filter{
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 24px;
+
     color: var(--iriscolor);
     cursor: pointer;
     border-color: transparent;
@@ -175,8 +347,33 @@ font-weight: 500;
     color: var(--cloud);
     background-color: var(--oceancolor);
 }
+/* End of filters */
+
+/* Projects */
+
+.project-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    padding-top: 48px;
+}
+
+.project{
+    border: 1px solid var(--cornflower)
+}
 
 .project-title{
+    display: flex;
+    padding: 0 16px;
+    padding-top: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+
     color: var(--navyblue);
     font-size: 20px;
     letter-spacing: 0.4px;
@@ -184,5 +381,15 @@ font-weight: 500;
 }
 
 .project-description{
+    display: flex;
+    padding: 0px 16px;
+    padding-bottom: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+
     color: var(--slatecolor);
 }
+
